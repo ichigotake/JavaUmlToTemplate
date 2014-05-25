@@ -7,7 +7,7 @@ Javaのインターフェースを元にテンプレートを生成します。
 ## USAGE
 
 1. [Javaファイルを用意します](src/main/java)
-2. [Javaファイルのインターフェースを変換するための定義を用意します](net/ichigotake/java/javaumltotemplate/sandbox)
+2. [Javaファイルのインターフェースを変換するための定義を用意します](src/main/groovy/net/ichigotake/java/javaumltotemplate/sandbox)
 3. Gradleのタスクを実行します `./gradlew run`
 4. [定義したテンプレートを元にファイルが生成されます](output)
 
