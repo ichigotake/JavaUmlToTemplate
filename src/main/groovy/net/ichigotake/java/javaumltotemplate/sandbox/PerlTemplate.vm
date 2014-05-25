@@ -1,0 +1,26 @@
+#* @vtlvariable name="packageClass" type="net.ichigotake.java.javaumltotemplate.reflect.PackageClass" *#package ${packageClass.getCamelizeName().replaceAll("\.", "::")};
+
+use strict;
+use warnings;
+
+sub new {
+    my $class = shift;
+    my $self = bless {@args}, $class;
+    return $self;
+}
+
+#foreach($method in $packageClass.getMethods())
+sub ${method.getName()} {
+    my $self = shift;
+#foreach($argument in $method.getArguments())
+    my $${argument.getSimpleName().toLowerCase()} = shift;
+#end
+
+#if(!${method.getReturnType().isVoid()})
+    return "${method.getReturnType().getSimpleName().toLowerCase()}"
+#end
+}
+
+#end
+
+1;

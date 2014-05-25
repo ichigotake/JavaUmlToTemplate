@@ -1,0 +1,23 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'maven'
+apply plugin: 'application'
+
+mainClassName = 'net.ichigotake.java.javaumltotemplate.task.JavaUmlToTemplate'
+
+sourceCompatibility = 1.6
+version = '0.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile localGroovy()
+    compile gradleApi()
+    groovy group: 'commons-io', name: 'commons-io', version: '2.4'
+    groovy group: 'org.codehaus.groovy', name: 'groovy', version: '2.0.1'
+    groovy group: 'org.apache.velocity', name: 'velocity-tools', version: '2.0'
+    groovy group: 'org.apache.velocity', name: 'velocity', version: '1.7'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
